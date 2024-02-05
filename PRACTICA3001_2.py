@@ -105,19 +105,34 @@ class Casilla_damas:
             self.tablero.t_celdas.rows[row][col] = '##'
 
 
-print('''BIENVENIDO AL TABLERO DE DAMAS''')
-print(''' Por favor, elige una opcion:
-1) Crear tablero
-2) Asignar casillas
-3) Mostrar tableros disponibles
-4) Manipular un tablero
-5) Salir''')
+intro = '''REGLAS:
+1) Esta practica esta diseñada para un tablero de damas 8x8 con 64 casillas.
+2) En un principio no existe un tablero creado, de modo que lo primero que haremos sera crear nuestro tablero con el comando:
+nombre_que_queramos = Tablero_damas()
+3) Una vez creado el tablero, las casillas vacias estan indicadas con su nombre siguiendo el esquema de tableros de ajedrez (A3, H8, C5 o la que sea) y las casillas ocupadas estan indicadas mediante '##'
+4)Podemos generar tantos tableros como queramos
+5)METODOS DEL TABLERO:
+- si queremos echar un ojo al tablero utilizamos el metodo .imprimir() y se nos mostrara el estado actual en consola.
+- si queremos resetearlo utilizamos el metodo .borrar_todo().
+- si queremos exportar el estado actual del tablero utilizamos el metodo .exportar(). Este nos pedira que nombremos el archivo de salida (no hay necesidad de poner la terminacion .txt. Si exportamos el mismo tablero u otro distinto indicando el mismo nombre al archivo de salida sobreescribiremos el archivo anterior)
+- el archivo se exportara a la carpeta donde almecenamos este programa .py
+- si queremos comprobar cuantas casillas permanecen vacias utilizamos el metodo .contar_vacios()
 
-opt = input('Indica tu opcion: ')
-
-if opt == 1:
+6)METODOS DE LAS CASILLAS:
+- si queremos ocupar/rellenar una de las casillas debemos utilizar el metodo .asignar() con la siguiente linea de codigo
+nombre_del_tablero.casillas.get(casilla_a_ocupar).asignar()  *Poner la letra en mayuscula
+si introducimos una casilla inexistente dara error, si introducimos una casilla ya ocupada nos lo notificara.
+- si queremos ocupar varias casillas a la vez podemos utilizar un bucle for como por ejemplo:
+for casilla in ['A1', 'A2', 'A3']:
+    nombre_del_tablero.casillas.get(casilla).asignar()
     
+en este caso es necesario presionar enter un par de veces.
+- si queremos liberar una casilla rellena anteriormete utilizamos el metodo .borrar() con la siguiente linea de codigo:
+nombre_del_archivo.casillas.get(casilla_a_liberar).borrar()
 
+ESTE TABLERO ESTA DISEÑADO PARA UTILIZARSE DIRECTAMENTE DESDE LA TERMINAL UTILIZANDO LOS METODOS INDICADOS.'''
+
+print(intro)
 
 
 
