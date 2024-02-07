@@ -1,0 +1,70 @@
+El administrador de diversar entidades bancarias necesita crear un programa con el cual puedan gestionar las finanzas de sus clientes.
+Se le ha solicitado al equipo de desarrollo crear un sistema que mediante consola le permita tanto a los cajeros como a los usuarios tener control de las finanzas.
+
+El programa debe contar con un control de acceso para distintos tipos de roles y disponer de funcionalidades determinadas
+para cada uno de estos.
+
+Existen 3 tipos de roles:
+	1) Administrador(1)
+	2) Cajero(2)
+	3) Usuario(3)
+
+Funciones en el Banco
+	-  Debe tener un menu donde pueda
+		1) Listar los cajeros(2) que existen
+		2) Obtener balance de dinero total
+		3) Listar los usuarios(3) que existen
+
+Funciones del administrador
+	-  Debe tener un menu donde pueda
+		1) Crear un nuevo banco
+		2) Gestionar un banco
+		3) Crear cuenta de acceso a los cajeros
+		4) Eliminar un cajero
+	
+Funciones del cajero
+	- Debe tener un menu donde pueda
+		1)Pueden crear cuentas de usuarios
+		2) Agregar dinero a cuenta de los usuarios
+		3) Retirar dinero de cuenta de los usuarios hacia su cartera fisica
+	- Restricciones
+		1) Un usuario no puede ingresar más de 10,000.00 USD a su cuenta
+		2) El mínimo monto que puede ingresar es a partir de los 25 USD
+
+Funciones del usuario
+	- Debe tener un menu donde pueda
+		1) Verificar su saldo en su cartera fisica
+		2) Verificar su saldo en su cuenta de ahorro
+		3) Solicitar a cualquiera de los cajeros ingreso de dinero a su cuenta de ahorros
+
+-Requerimientos Generales-
+	En un archivo llamado accounts.txt deberán almacenararse la cuentas en el siguiente formato
+		1) Cada linea debe tener la forma nombre|contrasena|rol|banco con el caracter de separacion "|" como se indica
+		   por ejemplo  -> 
+				fran|2937|1|2		<- administrador
+				soyla_luna|1524|3|2	<- usuario
+				pedrito|0025|2|2	<- cajero
+				juan_p|7584|2|2		<- cajero
+	El menú principal es el menú de acceso, luego del menú de acceso debe inicializarse el menú correspondiente al rol de
+	la persona que haya ingresado
+				
+
+	========================= BANCA LEOPOLDO =========================
+
+	Bienvenido a Banca Leopoldo,
+
+	Ingrese sus credenciales a continuacion.
+
+	user 	 >					#Primero solicita el nombre del usuario
+	password >					#Esto sale despues de ingresar el usuario
+	
+	Si es correcto el nombre y la contraseña, dale paso al menu correspondiente.
+
+Se sugiere crear:
+	Objeto Banco
+	Objeto CuentaAhorro
+	Objeto CarteraFisica
+	Objeto Usuario
+	Objeto Cajero
+	Objeto Administrador
+	Objeto Menu
