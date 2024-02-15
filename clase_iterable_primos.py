@@ -25,12 +25,13 @@ class Primes:
             for i in range(2, int(cuadrado) + 1):
                 if self.__numero % i == 0:
                     valido = False
+                    break
 
             if valido == True:
                 return self.__numero
 
 
-for i in Primes(10000):
+for i in Primes(1000):
     print(i, end = ',')
     
 
