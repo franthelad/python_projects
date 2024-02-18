@@ -6,7 +6,6 @@ def contador_infinito(num):
 contador = contador_infinito(2)
 
 def primos():
-    primos = []
     
     for numerador in contador: 
         divisores = []
@@ -16,9 +15,7 @@ def primos():
             if len(divisores) > 2:
                 break
         if len(divisores) == 2:
-            yield numerador
-            primos.append(numerador)
-        
+            yield numerador     
 
 enumerador_primos = primos()
 print(next(enumerador_primos))
